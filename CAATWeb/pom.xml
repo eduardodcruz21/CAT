@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>mx.gob.sat.comext</groupId>
+	<artifactId>CAATWeb</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>war</packaging>
+
+	<name>CAATWeb</name>
+	<description>CAATWeb Migracion de Websphere Application Server ft. Ant a Weblogic ft. Maven</description>
+
+	<properties>
+
+		<!-- Generic properties -->
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<targetJdk>1.6</targetJdk>
+
+	</properties>
+
+	<build>
+
+		<finalName>CAATWeb</finalName>
+		<sourceDirectory>src</sourceDirectory>
+		
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+			        <source>${targetJdk}</source> 
+			        <target>${targetJdk}</target> 
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<warSourceDirectory>WebContent</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	
+	</build>
+	
+</project>

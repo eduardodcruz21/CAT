@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema targetNamespace="http://sat.gob.mx/comercioexterior/caat/" version="1.0" xmlns:tns="http://sat.gob.mx/comercioexterior/caat/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Exception" type="tns:Exception"/>
+
+  <xs:element name="consultaChoferes" type="tns:consultaChoferes"/>
+
+  <xs:element name="consultaChoferesResponse" type="tns:consultaChoferesResponse"/>
+
+  <xs:element name="consultaDatosGenerales" type="tns:consultaDatosGenerales"/>
+
+  <xs:element name="consultaDatosGeneralesNAV" type="tns:consultaDatosGeneralesNAV"/>
+
+  <xs:element name="consultaDatosGeneralesNAVResponse" type="tns:consultaDatosGeneralesNAVResponse"/>
+
+  <xs:element name="consultaDatosGeneralesResponse" type="tns:consultaDatosGeneralesResponse"/>
+
+  <xs:element name="consultaVehiculos" type="tns:consultaVehiculos"/>
+
+  <xs:element name="consultaVehiculosResponse" type="tns:consultaVehiculosResponse"/>
+
+  <xs:complexType name="consultaVehiculos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaVehiculosResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:vehiculo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="vehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string"/>
+      <xs:element minOccurs="0" name="numEconomico" type="xs:string"/>
+      <xs:element minOccurs="0" name="numPlacas" type="xs:string"/>
+      <xs:element minOccurs="0" name="paisEmisor" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipo" type="xs:string"/>
+      <xs:element minOccurs="0" name="transponder" type="xs:string"/>
+      <xs:element minOccurs="0" name="vin" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaChoferes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaChoferesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:chofer"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="chofer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curp" type="xs:string"/>
+      <xs:element minOccurs="0" name="direccion" type="xs:string"/>
+      <xs:element minOccurs="0" name="nacionalidad" type="xs:string"/>
+      <xs:element minOccurs="0" name="paisResidencia" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaDatosGenerales">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaDatosGeneralesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:detalleCAAT"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="detalleCAAT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="domicilio" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="extranjero" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombreContacto" type="xs:string"/>
+      <xs:element minOccurs="0" name="nombreDirGral" type="xs:string"/>
+      <xs:element minOccurs="0" name="rfc" type="xs:string"/>
+      <xs:element minOccurs="0" name="telefonoContacto" type="xs:string"/>
+      <xs:element minOccurs="0" name="tipoEmpresa" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaDatosGeneralesNAV">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="consultaDatosGeneralesNAVResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:detalleCAATNav"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="detalleCAATNav">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="pais" type="xs:string"/>
+      <xs:element minOccurs="0" name="representanteLegal" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

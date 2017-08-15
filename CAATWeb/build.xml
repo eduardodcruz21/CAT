@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CPED" default="all">
+
+	<path id="compile.classpath">
+		<fileset dir="../lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="build" />
+		<delete dir="WebContent/WEB-INF/classes" />
+	</target>	
+
+	<target name="init">
+		<mkdir dir="build/classes"/>
+	</target>
+	
+	<target name="CAATWeb.class">
+		<javac destdir="build/classes" srcdir="src" includeantruntime="false"/>
+	</target>
+	<target name="CAATWeb.war">
+		<war destfile="build/CAATWeb.war" webxml="WebContent/WEB-INF/web.xml" duplicate="preserve">
+			<fileset dir="WebContent"/>
+			<classes dir="build/classes"/>
+		</war>
+	</target>
+	<target name="CAATWeb" depends="CAATWeb.class, CAATWeb.war"/>
+	<target name="all" depends="clean, init, CAATWeb"/>
+</project>

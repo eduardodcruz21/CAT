@@ -1,0 +1,17 @@
+mx\gob\sat\comercioexterior\servicio\response\DetalleCAAT.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaChoferesResponse.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaVehiculos.class
+mx\gob\sat\comercioexterior\servicio\response\DetalleCAATNav.class
+mx\gob\sat\comercioexterior\servicio\response\Vehiculo.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ExceptionBean.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaChoferes.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaDatosGeneralesResponse.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaVehiculosResponse.class
+mx\gob\sat\comercioexterior\servicio\response\Chofer.class
+mx\gob\sat\comercioexterior\servicio\CAAT.class
+mx\gob\sat\comercioexterior\dao\OrigendeDatos.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaDatosGeneralesNAVResponse.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaDatosGenerales.class
+mx\gob\sat\comercioexterior\dao\CAATDAO.class
+mx\gob\sat\comercioexterior\servicio\CAATDelegate.class
+mx\gob\sat\comercioexterior\servicio\jaxws\ConsultaDatosGeneralesNAV.class
